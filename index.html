@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Play some tic tac toe.">
+  	<meta name="author" content="westtle">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tic Tac Toe</title>
+
+	<link rel="stylesheet" type="text/css" href="assets/styles/style.css">
+</head>
+<body>
+	<main>
+		<div id="tic-tac-toe">
+			<div class="__win-lose">Player 1</div>
+			<div class="__gameboard">
+				<div class="_box" id="0"></div>
+				<div class="_box" id="1"></div>
+				<div class="_box right" id="2"></div>
+				<div class="_box" id="3"></div>
+				<div class="_box" id="4"></div>
+				<div class="_box right" id="5"></div>
+				<div class="_box bottom" id="6"></div>
+				<div class="_box bottom" id="7"></div>
+				<div class="_box right bottom" id="8"></div>
+			</div>
+			<div class="__reset">
+				<button>Restart</button>
+			</div>
+			<div class="__change-mode">
+				<button>Singleplayer Mode</button>
+			</div>
+
+			<div class="__score-system">
+				<div class="_score">
+					<h1>Multiplayer Score</h1>
+					<div>
+						<span class="-left"><span>Player 1:</span> <span class="number">0</span></span>
+						<span class="-right"><span>Player 2:</span> <span class="number">0</span></span>
+					</div>
+				</div>
+				<div class="__reset-data">
+					<button>Reset Data</button>
+				</div>
+			</div>
+
+			<div class="__notice">*The AI is pretty bad.</div>
+		</div>
+	</main>
+
+	<script type="text/javascript" src="assets/scripts/script.js"></script>
+</body>
+</html>
