@@ -1,144 +1,84 @@
 :root {
+	--font-size-main: 0.906rem; /* 14.5px */
+	--font-size-second: 0.688rem; /* 11px */
+
+	--color-main: rgba(0, 0, 0, 0.8);
 	--border-main: rgba(0, 0, 0, 0.6);
+	--border-shorthand: 0.063rem solid rgba(0, 0, 0, 0.6);
+
+	/* Button */
 	--button-hover-backround: rgba(0, 0, 0, 0.8);
 	--button-hover-color: rgba(255, 255, 255, 0.9);
-	--box-hover: "";
+	--font-size-button: 0.769rem; /* 12.3px */
+
+	--unit-one: 0.438rem; /* 7px */
+	--unit-two: 0.75rem; /* 12px */
 }
 
-* {
-	color: rgba(0, 0, 0, 0.8);
+*, *::before, *::after {
+	color: var(--color-main);
 	box-sizing: border-box;
-	font-size: 14.5px;
+}
+
+body { /* Left & right spacing is left & right from default body margin + 12px */
+	height: 100vh;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: var(--unit-two);
+	font-size: var(--font-size-main);
 }
 
 main {
-	padding: 12px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: calc(100% - 9vh);
+	max-width: 25rem;
+	margin: 4.5vh auto;
 	text-align: center;
 }
 
-#tic-tac-toe {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	max-width: 400px;
-	margin: 4.5vh auto;
-}
-
-.__win-lose {
-	border: 1px solid var(--border-main);
-	border-bottom: none;
-	width: 311px;
-	padding: 8px;
-}
-
 .__gameboard {
-	display: flex;
-	flex-wrap: wrap;
-	border: 1px solid var(--border-main);
-	width: 311px;
-	height: 280px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
 }
 
 ._box {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	border-right: 1px solid var(--border-main);
-	border-bottom: 1px solid var(--border-main);
-	width: 103px;
-	height: 93px;
-	font-size: 40px;
+	/*display: flex;*/
+	/*justify-content: center;*/
+	/*align-items: center;*/
+	border-right: var(--border-shorthand);
+	border-bottom: var(--border-shorthand);
+	width: 85px;
+	height: 85px;
+	/*font-size: 30px;*/
 	cursor: pointer;
 }
 
-._box:hover {
+/*._box:hover {
 	background: var(--button-hover-backround);
 	color: var(--button-hover-color);
-}
+}*/
 
-.right {
+.right_ {
 	border-right: none;
 }
 
-.bottom {
+.bottom_ {
 	border-bottom: none;
 }
 
-.__reset {
-	border: 1px solid var(--border-main);
-	border-top: none;
-	border-bottom: none;
-	width: 311px;
+.__player-amount {
+	margin-top: calc(var(--unit-two) * 2);
+	text-decoration: underline;
 }
 
-.__reset button,
-.__change-mode button,
-.__score-system button {
-	background: none;
-	border: none;
-	width: 100%;
-	padding: 7px 12px;
-	font-size: 12.3px;
+.__player-amount span {
+	padding: var(--unit-one) var(--unit-two);
 	cursor: pointer;
 }
 
-.__reset button:hover,
-.__change-mode button:hover,
-.__score-system button:hover {
-	background: var(--button-hover-backround);
-	color: var(--button-hover-color);
-}
-
-.__change-mode {
-	border: 1px solid var(--border-main);
-	border-top: none;
-	width: 311px;
-}
-
-/* Score System */
-
-.__score-system {
-	width: 100%;
-}
-
-.__score-system h1 {
-	border-bottom: 1px solid var(--border-main);
-	margin-bottom: 0;
-	padding-bottom: 9.715px;
-}
-
-._score {
-	display: flex;
-	flex-direction: column;
-	border: 1px solid var(--border-main);
-	width: 100%;
-	height: 100%;
-	margin-top: 15px;
-}
-
-._score div {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100%;
-}
-
-._score span {
-	margin: 24px 12px;
-}
-
-._score span .number {
-	margin: 12px !important;
-	font-weight: bold;
-}
-
-.__reset-data {
-	border: 1px solid var(--border-main);
-	border-top: none;
-}
-
-/* Extra */
-
+/*
 .horizontal-strike-out {
 	font-size: 40px;
 	text-decoration: line-through;
@@ -166,56 +106,7 @@ main {
 	position: absolute;
 }
 
-.__notice {
-	display: none;
-	margin-top: 9.715px;
-	font-size: 11px;
-}
-
 .hover-effect::after {
 	content: var(--box-hover);
 }
-
-/* Media Query */
-
-@media (max-width: 351px) {
-	* {
-		font-size: 12px;
-	}
-
-	.__win-lose,
-	.__gameboard,
-	.__reset,
-	.__change-mode {
-		width: 221px;
-	}
-
-	.__gameboard {
-		height: 190px;
-	}
-
-	._box {
-		width: 73px;
-		height: 63px;
-		font-size: 20px;
-	}
-
-	.__score-system {
-		min-width: 221px;
-	}
-
-	._score {
-		height: 100%;
-	}
-
-	button {
-		font-size: 10px !important;
-	}
-
-	.horizontal-strike-out,
-	.vertical-strike-out,
-	.diagonal-left-strike-out,
-	.diagonal-right-strike-out {
-		font-size: 28px;
-	}
-}
+*/
