@@ -49,9 +49,9 @@ main {
 	align-items: center;
 	border-right: var(--border-shorthand);
 	border-bottom: var(--border-shorthand);
-	width: 85px;
-	height: 85px;
-	font-size: 38px;
+	width: 5.313rem;
+	height: 5.313rem;
+	font-size: 2.375rem;
 	cursor: pointer;
 }
 
@@ -81,7 +81,7 @@ main {
 .vertical-strike-out_,
 .diagonal-left-strike-out_,
 .diagonal-right-strike-out_ {
-	font-size: 35px;
+	font-size: 2.188rem;
 	text-decoration: line-through;
 }
 
