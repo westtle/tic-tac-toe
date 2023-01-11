@@ -73,9 +73,12 @@ main {
 	cursor: default;
 }
 
-.__buttons span {
+.__buttons button {
+	background: none;
+	border: none;
 	margin: 0 var(--unit-one);
 	padding: var(--unit-one) var(--unit-two);
+	font-size: var(--font-size-button);
 	text-decoration: underline;
 	cursor: pointer;
 }
