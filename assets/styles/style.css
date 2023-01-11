@@ -68,7 +68,7 @@ main {
 }
 
 .__buttons {
-	margin-top: calc(var(--unit-two) * 2);
+	margin-top: calc(var(--unit-two) * 1.8);
 	cursor: default;
 }
 
