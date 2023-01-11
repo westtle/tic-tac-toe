@@ -77,10 +77,6 @@ main {
 
 /* Extra */
 
-.hover-effect_::after {
-	content: var(--box-hover);
-}
-
 .horizontal-strike-out_,
 .vertical-strike-out_,
 .diagonal-left-strike-out_,
@@ -107,3 +103,19 @@ main {
 	transform: rotate(135deg);
 	position: absolute;
 }
+
+/* Media Query */
+
+@media (hover: hover) {
+	.hover-effect_::after {
+		content: var(--box-hover);
+	}
+}
+
+/* Font Size */
+@media (max-width: 30rem) { /* 480px */
+	html {
+		font-size: calc(1rem - 10%);
+	}
+}
+/* -------- */
