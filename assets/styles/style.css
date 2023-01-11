@@ -44,21 +44,16 @@ main {
 }
 
 ._box {
-	/*display: flex;*/
-	/*justify-content: center;*/
-	/*align-items: center;*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	border-right: var(--border-shorthand);
 	border-bottom: var(--border-shorthand);
 	width: 85px;
 	height: 85px;
-	/*font-size: 30px;*/
+	font-size: 38px;
 	cursor: pointer;
 }
-
-/*._box:hover {
-	background: var(--button-hover-backround);
-	color: var(--button-hover-color);
-}*/
 
 .right_ {
 	border-right: none;
@@ -68,45 +63,47 @@ main {
 	border-bottom: none;
 }
 
-.__player-amount {
+.__buttons {
 	margin-top: calc(var(--unit-two) * 2);
-	text-decoration: underline;
+	cursor: default;
 }
 
-.__player-amount span {
+.__buttons span {
+	margin: 0 var(--unit-one);
 	padding: var(--unit-one) var(--unit-two);
+	text-decoration: underline;
 	cursor: pointer;
 }
 
-/*
-.horizontal-strike-out {
-	font-size: 40px;
+/* Extra */
+
+.hover-effect_::after {
+	content: var(--box-hover);
+}
+
+.horizontal-strike-out_,
+.vertical-strike-out_,
+.diagonal-left-strike-out_,
+.diagonal-right-strike-out_ {
+	font-size: 35px;
 	text-decoration: line-through;
+}
+
+.horizontal-strike-out_ {
 	position: absolute;
 }
 
-.vertical-strike-out {
-	font-size: 40px;
-	text-decoration: line-through;
+.vertical-strike-out_ {
 	transform: rotate(90deg);
 	position: absolute;
 }
 
-.diagonal-left-strike-out {
-	font-size: 40px;
-	text-decoration: line-through;
-	transform: rotate(43deg);
+.diagonal-left-strike-out_ {
+	transform: rotate(45deg);
 	position: absolute;
 }
 
-.diagonal-right-strike-out {
-	font-size: 40px;
-	text-decoration: line-through;
-	transform: rotate(137deg);
+.diagonal-right-strike-out_ {
+	transform: rotate(135deg);
 	position: absolute;
 }
-
-.hover-effect::after {
-	content: var(--box-hover);
-}
-*/
