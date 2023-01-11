@@ -63,10 +63,10 @@ function aiPlay() {
 };
 
 function winCheck(player) {
-	const horizontalStrikeOut = `<span class="horizontal-strike-out_">&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>`;
-	const verticalStrikeOut = `<span class="vertical-strike-out_">&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>`;
-	const diagonalLeftStrikeOut = `<span class="diagonal-left-strike-out_">&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>`;
-	const diagonalRightStrikeOut = `<span class="diagonal-right-strike-out_">&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>`;
+	const horizontalStrikeOut = `<span class="horizontal-strike-out_"></span>`;
+	const verticalStrikeOut = `<span class="vertical-strike-out_"></span>`;
+	const diagonalLeftStrikeOut = `<span class="diagonal-left-strike-out_"></span>`;
+	const diagonalRightStrikeOut = `<span class="diagonal-right-strike-out_"></span>`;
 
 	// All winning conditions.
 	if (boxStatus[0] == player && boxStatus[1] == player && boxStatus[2] == player) {

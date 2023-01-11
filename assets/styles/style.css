@@ -45,6 +45,8 @@ main {
 .__gameboard {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
+
+	position: relative;
 }
 
 ._box {
@@ -89,26 +91,35 @@ main {
 .vertical-strike-out_,
 .diagonal-left-strike-out_,
 .diagonal-right-strike-out_ {
-	font-size: 2.188rem;
+	border-top: 1.6px solid var(--color-main);
 	text-decoration: line-through;
 }
 
 .horizontal-strike-out_ {
+	width: 94%;
+	
 	position: absolute;
 }
 
 .vertical-strike-out_ {
-	transform: rotate(90deg);
+	border-top: none;
+	border-left: 1.6px solid var(--color-main);
+	height: 94%;
+
 	position: absolute;
 }
 
 .diagonal-left-strike-out_ {
+	width: 115%;
 	transform: rotate(45deg);
+
 	position: absolute;
 }
 
 .diagonal-right-strike-out_ {
+	width: 115%;
 	transform: rotate(135deg);
+
 	position: absolute;
 }
 
