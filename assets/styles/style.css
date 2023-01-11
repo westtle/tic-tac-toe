@@ -54,7 +54,8 @@ main {
 	border-right: var(--border-shorthand);
 	border-bottom: var(--border-shorthand);
 	width: 100%;
-	height: 5.313rem;
+	height: 20vh;
+	max-height: 5.313rem;
 	font-size: 2.188rem;
 	cursor: pointer;
 }
