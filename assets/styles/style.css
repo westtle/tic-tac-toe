@@ -1,22 +1,23 @@
 :root {
-	--font-size-main: 0.906rem; /* 14.5px */
-	--font-size-second: 0.688rem; /* 11px */
+	--font-size-primary: 0.906rem; /* 14.5px */
+	--font-size-secondary: 0.688rem; /* 11px */
 
-	--color-main: rgba(0, 0, 0, 0.8);
-	--border-main: rgba(0, 0, 0, 0.6);
-	--border-shorthand: 0.063rem solid rgba(0, 0, 0, 0.6);
+	--foreground: rgba(0, 0, 0, 0.75);
+
+	--border-color: rgba(0, 0, 0, 0.55);
+	--border-shorthand: 0.063rem solid var(--border-color);
 
 	/* Button */
-	--button-hover-backround: rgba(0, 0, 0, 0.8);
-	--button-hover-color: rgba(255, 255, 255, 0.9);
+	--button-hover-foreground: rgba(255, 255, 255, 0.9);
+	--button-hover-backround: rgba(0, 0, 0, 0.78);
 	--font-size-button: 0.769rem; /* 12.3px */
 
-	--unit-one: 0.438rem; /* 7px */
-	--unit-two: 0.75rem; /* 12px */
+	--seven: 0.438rem; /* 7px */
+	--twelve: 0.75rem; /* 12px */
 }
 
 *, *::before, *::after {
-	color: var(--color-main);
+	color: var(--foreground);
 	box-sizing: border-box;
 }
 
@@ -69,15 +70,15 @@ main {
 }
 
 .__buttons {
-	margin-top: calc(var(--unit-two) * 1.8);
+	margin-top: calc(var(--twelve) * 1.8);
 	cursor: default;
 }
 
 .__buttons button {
 	background: none;
 	border: none;
-	margin: 0 var(--unit-one);
-	padding: var(--unit-one) var(--unit-two);
+	margin: 0 var(--seven);
+	padding: var(--seven) var(--twelve);
 	font-size: var(--font-size-button);
 	text-decoration: underline;
 	cursor: pointer;
@@ -87,8 +88,8 @@ main {
 
 #notice {
 	margin-top: 0.656rem;
-	padding: 0 var(--unit-one);
-	font-size: var(--font-size-second);
+	padding: 0 var(--seven);
+	font-size: var(--font-size-secondary);
 	line-height: 1.1;
 	word-wrap: break-word;
 }
@@ -99,7 +100,7 @@ main {
 .vertical-strike-out_,
 .diagonal-left-strike-out_,
 .diagonal-right-strike-out_ {
-	border-top: 1.6px solid var(--color-main);
+	border-top: 1.6px solid var(--foreground);
 	text-decoration: line-through;
 }
 
@@ -111,7 +112,7 @@ main {
 
 .vertical-strike-out_ {
 	border-top: none;
-	border-left: 1.6px solid var(--color-main);
+	border-left: 1.6px solid var(--foreground);
 	height: 94%;
 
 	position: absolute;
